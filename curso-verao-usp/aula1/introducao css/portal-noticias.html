@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portal de notícias</title>
+    <style>
+        /*tirando espaçamento do body (tudo)*/
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        /*estilizando o texto do portal de noticias/ cabeçalho*/ 
+        header h1 {
+            text-align: center;
+            margin-top: 0; /*por padrao o cabeçalho tem margem, isso é p tirar*/
+        }        
+        header .link{
+            float: right; /*faz com o que o elemento saia do fluxo natural,
+            neste caso é o "seja assinante"display: ;*/
+        }
+        header{
+            background-color: rgb(217, 215, 215);
+            padding: 15px 30px; /*se for margin a cor nao vai pegar em tudo */
+        }
+        header nav { /*é uma div entap por padrao ocupa todo 
+        o espaço, por isso tenho que aplicar a regra inline block*/
+            display: inline-block;
+        }
+        header nav ul{
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            display: inline-block;
+            margin: 0;
+            
+            li{
+                display: inline-block; /*deixa os temas um do lado do outro*/
+
+            }
+        }
+        /*p deixar as div lado a lado:*/
+        main aside{ 
+            float: left;
+            width: 40%;
+        }
+        main article{
+            float: right;
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <header><!--cabecalho-->
+        <h1>Portal de notícias</h1>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#"> tema 1</a></li>
+                    <li><a href="#"> tema 2</a></li>
+                    <li><a href="#"> tema 3</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="link">Seja assinante</a> 
+            <!--essa tag "a" é de ancora p hiperlink--> 
+        </section>
+    </header>
+    <main>
+        ><aside>
+            <h1>Mais lidas</h1>
+            <a href="#" >
+                <img src="" alt="Imagem da noticia">
+                Noticia muito interessante
+            </a>
+        </aside>
+        <article>
+            <h1>título</h1>
+            <summary>
+                <h2>resumo mussia</h2>
+                <p>esse é um resumo do artigo jsjsjsj djjjd</p>
+            </summary>
+            <details>
+                <p>frase legal vários paragrafos</p>
+                <p>frase legal vários paragrafos</p>
+                <p>frase legal vários paragrafos</p>
+                <p>frase legal vários paragrafos</p>
+            </details>
+        </article>
+    </main>
+</body>
+</html>
