@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+    <style>
+        #lampada{
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            align-items: center;
+
+            &.acesa{
+                #bulbo{
+                    background-color: yellow;
+                }
+
+                #fiozinho{
+                    transform: scale(.8, 1.5);
+                }
+            }
+
+            #bulbo{
+                transition: all .35s;
+                background-color: rgb(196, 196, 192);
+                width: 100px;
+                height: 100px;
+                clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 68% 100%, 32% 100%, 0% 60%, 10% 20%); /*formato de cima da lampada pego no site*/
+                z-index: 1;
+
+            }
+            #base{
+                background-color: slategray;
+                width: 40px;
+                height: 30px;
+                border-radius: 0 0 15px 15px; /*da pra ver no site*/
+                z-index: 1;
+            }
+            #fiozinho{
+                background-color: black;
+                width: 10px;
+                height: 30px;
+                cursor: pointer; /*deixa customizar o cursor do mouse 
+                quando ele passa em cima*/
+                transition: all .15s;
+                z-index: 0; /*pra fazer com que o fio nao vem p frente quando clicar 
+                ->z index com maior valor fica p  frente<-*/
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>lampada</h1>
+    <div id="lampada">
+        <div id="bulbo"></div>
+        <div id="base"></div>
+        <div id="fiozinho"></div>
+    </div>
+    <script src="eventos.js"> </script>
+</body>
+</html>
