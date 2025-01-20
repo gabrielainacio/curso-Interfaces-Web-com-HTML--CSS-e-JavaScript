@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <style>
+        #jogo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 300px;
+            height: 300px;
+            border: 1;
+            
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                font-family:monospace;
+                font-size: 55px;
+
+                &.preenchido{
+                    cursor: not-allowed;
+                }
+
+                &:nth-of-type(2n+1){
+                    background-color: rgb(224, 124, 182);
+                }
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="jogo">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script src="C:\Users\gabri\Documents\GitHub\curso-Interfaces-Web-com-HTML--CSS-e-JavaScript\curso-verao-usp\aula 3\jogo-da-velha.js"></script>
+
+</body>
+</html>
